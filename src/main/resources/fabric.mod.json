@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "gui_editor",
+	"version": "${version}",
+	"name": "GUI_Editor",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/gui_editor/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.carmindy.gui_editor.GUI_Editor"
+		],
+		"client": [
+			"com.carmindy.gui_editor.client.GUI_EditorClient"
+		]
+	},
+	"mixins": [
+		"gui_editor.mixins.json",
+		{
+			"config": "gui_editor.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
